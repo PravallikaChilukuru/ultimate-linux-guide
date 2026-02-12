@@ -7,16 +7,16 @@ Imagine a machine where you put fruit in the top and get juice out of one nozzle
 - 0 (Input): The fruit you put in.
 - 1 (Output): The delicious juice (the data you want).
 - 2 (Error): The pulp/scraps (the errors you want to filter out).
-
+---
 - When you write > /dev/null, Bash assumes you mean Stream 1. It’s shorthand for 1> /dev/null.
 - It sends the "juice" to the trash.
 - However, the "pulp" (Stream 2) is still coming out of the other nozzle and landing on your screen!
 
   ### Translating 2>&1
-  > 2: The Error stream (stderr).
-  > '>': Redirect it...
-  > &: ...to the same place as...
-  > 1: ...the Output stream (stdout).
+  - 2: The Error stream (stderr).
+  - '>': Redirect it...
+  - &: ...to the same place as...
+  - 1: ...the Output stream (stdout).
 
 So, ``` ping -c 1 $IP > /dev/null 2>&1 ``` means:
 1. Send the Output (1) to the trash.
