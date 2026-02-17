@@ -36,6 +36,7 @@ So, ``` ping -c 1 $IP > /dev/null 2>&1 ``` means:
         fi
 done < servers.txt
 ```
+> By setting ``` -W 1 ``` it means to wait for 1 second for the response if the server doesn't respond within 1 second, consider it down
 
 ### Servers.txt
 > 8.8.8.8
